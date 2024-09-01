@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+
+    /* Custom Scroll */
+
+::-webkit-scrollbar {
+     width: 8px;
+}
+    
+::-webkit-scrollbar-thumb {
+     background: var(--tertiary-color);
+     border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+     background: var(--secondary-color);
+}
+
+/*NAV*/
+
+.menu{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 10px 16px;
+  
+}
+
+.menu-img{
+  width: 160px;
+  
+}
+
+
+.container-titulo>a{
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  margin: 0px 15px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif ;
+  font-size: 12px;
+  
+}
+
+.container-titulo>a:nth-child(2){
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+  padding: 8px 25px;
+  transition: background 1s, color 1s;
+}
+
+.container-titulo>a:nth-child(2):hover{
+  background-color: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+}
+
+
+/*HEADER*/
+
+.header{
+  position: relative;
+  margin-top: 50px;
+  padding: 100px 0 300px;
+  background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite alternate;
+
+}
+
+.header::after{
+  content: "";
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header-content{
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  align-items: center;
+  text-align: center;
+  margin:auto;
+  gap: 40px;
+}
+
+.header-channels{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.header-channel{
+  object-fit: contain;
+}
+
+.header-tittle{
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+}
+
+.header-tittle>h1{
+  font-size:48px;
+}
+
+.divider{
+  width: 70%;
+  max-width: 700px;
+  height: 5px;
+  background: var(--divider-bg-color);
+}
+
+.offer{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+.offer-price{
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.offer-price>span{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.button{
+  font-size: 13px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  
+}
+
+.animation-button{
+  animation: wiggle 2.2s linear infinite;
+}
+
+.text-small{
+  font-family: 'Quicksand', sans-serif;
+  max-width: 300px;
+  text-align: center;
+  font-weight: 100;
+}
+
+/*MAIN*/
+.subscription{
+  background-image: url('../images/background-movies-series.png');
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.tittle{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.subscription-plans{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 80px;
+  perspective: 2000px;
+  perspective-origin: top;
+  
+}
+
+.subscription-card{
+  padding: 40px 60px;
+  background: var(--card-bg-color);
+  display: flex;
+  min-height: 600px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  transition: transform 1s ease-in-out;
+}
+
+.subscription-plan{
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscription-plan>h3{
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+}
+
+.subscription-plan>.plan-offer{
+  color: var(--secondary-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.plan-offer>span{
+  font-size: 16px;
+  font-weight: normal;
+  color:white;
+}
+
+.subscription-goals{
+  padding: 15px 0;
+  text-align: left;
+  list-style-type: none;
+}
+
+.subscription-goals>li{
+  padding: 15px 0;
+  font-size: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.subscription-goals>li::before{
+  content: "+";
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.button.button-gradient{
+  background: var(--btn-bg-color-gradient);
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  background-size: 250%;
+  border: none;
+  cursor: pointer;
+}
+
+.button-gradient:hover{
+  background-color: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.subscription-plans:has(.subscription-card:nth-child(1):hover) .subscription-card:nth-child(2) {
+  transform: rotateY(-45deg);
+}
+
+.subscription-plans:has(.subscription-card:nth-child(2):hover) .subscription-card:nth-child(1){
+  transform: rotateY(45deg);
+}
+
+.contents{
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.contents-container{
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.content-cards{
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.content-image{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+.content-cards:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--tertiary-color);
+}
+.content-cards:hover .content-image {
+  opacity: 0;
+}
+
+.content-cards:nth-child(1):hover {
+  background-image: url("../images/hbo-hover_0.webp");
+}
+
+.content-cards:nth-child(2):hover {
+  background-image: url("../images/MAX-Hover.webp");
+}
+
+
+
+.content-cards:nth-child(3):hover {
+  background-image: url("../images/DC-Hover.webp");
+}
+
+
+
+.content-cards:nth-child(4):hover {
+  background-image: url("../images/WB-Hover.webp");
+}
+
+
+
+.content-cards:nth-child(5):hover {
+  background-image: url("../images/CN-Hover.png");
+}
+
+
+
+.content-cards:nth-child(6):hover {
+  background-image: url("../images/UCL-Hover.webp");
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px;
+}
+
+
+.footer-links{
+  text-transform: uppercase;
+  color: var(--link-color);
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 1s;
+  letter-spacing: 2px;
+}
+
+.footer-links:hover{
+  color: white;
+}
+
+.small-text-link{
+  color: var(--link-color);
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.social-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1140px){
+  .subscription-plans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscription-card{
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .contents-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+
+
+  @media screen and (max-width: 480px){
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .menu-img{
+    width: 100px;
+    padding: 24px 0;
+    
+  }
+
+  .header{
+    margin-top: 128px;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contents-container{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+    gap: 40px;
+  }
+}
+
+
+
+@keyframes gradient{
+
+0% {
+    background-position: 0% 50%;
+}
+
+50%{
+  background-position: 100% 50%;
+}
+
+100%{
+  background-position: 0% 50%;
+}
+  
+}
+
+@keyframes wiggle{
+0%, 10% {
+    transform: rotate(0);
+}
+15% {
+    transform: rotate(-15deg);
+}
+20% {
+    transform: rotate(10deg);
+}
+25% {
+    transform: rotate(-10deg);
+}
+30% {
+    transform: rotate(10deg);
+}
+35% {
+    transform: rotate(-10deg);
+}
+40%, 100% {
+    transform: rotate(0);
+}
+}
+
+@keyframes background{
+
+}

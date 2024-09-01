@@ -1,0 +1,67 @@
+body{
+    background-image: url('../images/background-movies-series.png');
+  background-size: cover;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    padding: 24px;
+    max-width: 800px;
+    background-color: var(--form-bg-color);
+    margin: auto;
+    text-align: center;
+    font-family: "Quicksand", cursive;
+    gap: 24px;
+}
+
+.login-title{
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+.login-field{
+    background-color: var(--form-field-bg-color);
+    border: var( --form-field-border);
+    border-radius: 8px;
+    color: var(--text-color);
+    padding: 16px;
+    font-size: 1rem;
+}
+
+.login-text{
+    text-align: left;
+}
+
+.login-action{
+    margin: 24px 0;
+    text-align: left;
+}
+
+.link-button{
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+    font-weight: bold;
+   font-size: 16px;
+    margin-left: 24px;
+}
+
+@media screen and (max-width: 480px){
+    .login-form{
+        margin-top: 80px;
+    }
+}
